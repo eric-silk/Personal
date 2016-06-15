@@ -8,13 +8,13 @@ R2 = 4.7.*10^3; % 4.7k Ohms
 Is = 2.5*10^-9; % Saturation current, ~2.5nA (play with if results are undesirable)
 Vt = 0.026; % Thermal Vo_guessltage, 26mV@300K
 
-%Drive control, variable betweek 0 and 500k Ohms
+%Drive control, variable between 0 and 500k Ohms
 Rd = 500.*10^3;
 
 % Signal parameters
 freq = 1000;
 w = 2.*pi.*freq;
-samplerate = 100*10^3;
+samplerate = 500*10^3;
 amp = .03;
 t0 = 0;
 tf = .01;
@@ -34,8 +34,8 @@ maxiter = 10000; %Maximum # of iterations for any looping structure
 incr = .0001; % used for derivative approximation
 eps = 0.000001;
 
-Vo = zeros(samples);
-fprime_hold = zeros(samples);
+Vo = zeros(samples,1);
+fprime_hold = zeros(samples,1);
 Vo(1) = 0;
 
 for n = 2:samples %Sample looping
@@ -100,5 +100,3 @@ ylabel('|P1(f)|')
 axis([0 20000 0 1])
 title(title2);
 grid on;
-
-%clear all;
