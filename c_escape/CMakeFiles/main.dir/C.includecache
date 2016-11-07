@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eric/pre-season-coding/c_escape/src/c_escape.h
+
+/home/eric/pre-season-coding/c_escape/src/main.c
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+c_escape.h
+/home/eric/pre-season-coding/c_escape/src/c_escape.h
+
